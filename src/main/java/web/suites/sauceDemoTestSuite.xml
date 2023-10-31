@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Sauce demo test suite">
+    <listeners>
+        <listener class-name="web.listeners.ScreenshotListener"></listener>
+    </listeners>
+    <parameter name="browser" value="chrome"></parameter>
+    <parameter name="url" value="https://www.saucedemo.com/"></parameter>
+    <!--For password and similar confidential data i would definitely use environment variables to keep values outside code-->
+    <parameter name="username" value="standard_user"></parameter>
+    <parameter name="password" value="secret_sauce"></parameter>
+    <test name="Purchase tests">
+        <classes>
+            <class name="web.tests.PurchaseTest"></class>
+        </classes>
+    </test>
+</suite>

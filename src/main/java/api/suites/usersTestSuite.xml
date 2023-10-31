@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Validation of users endpoint">
+    <parameter name="baseUrl" value="${BASE_URL}"/>
+
+    <!--Endpoints-->
+    <parameter name="baseUrl" value="https://gorest.co.in"/>
+    <parameter name="usersEndpoint" value="/public/v2/users"></parameter>
+
+    <test name="UsersTest">
+        <classes>
+            <class name="api.tests.UsersEndpointTests"></class>
+        </classes>
+    </test>
+</suite>
